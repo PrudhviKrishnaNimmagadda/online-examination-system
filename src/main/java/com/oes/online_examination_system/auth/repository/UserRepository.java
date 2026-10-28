@@ -1,5 +1,6 @@
 package com.oes.online_examination_system.auth.repository;
 
+import com.oes.online_examination_system.auth.Role;
 import com.oes.online_examination_system.auth.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -12,5 +13,5 @@ public interface UserRepository  extends JpaRepository<User, Long>{
 	
 	boolean existsByEmail(String email);
 	
-
+	boolean existsByRole(Role role);
 }

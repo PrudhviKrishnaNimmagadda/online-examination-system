@@ -70,6 +70,16 @@ public class AuthService {
                     "Invalid email or password"
             ));
 
+		
+//		System.out.println(
+//			    "Password matches: " +
+//			    passwordEncoder.matches(
+//			        request.password(),
+//			        user.getPasswordHash()
+//			    )
+//			);
+		
+		
     if (!passwordEncoder.matches(
             request.password(), user.getPasswordHash())) {
         throw new ResponseStatusException(
